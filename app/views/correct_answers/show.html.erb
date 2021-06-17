@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Answer a correct:</strong>
+  <%= @correct_answer.answer_a_correct %>
+</p>
+
+<p>
+  <strong>Answer b correct:</strong>
+  <%= @correct_answer.answer_b_correct %>
+</p>
+
+<p>
+  <strong>Answer c correct:</strong>
+  <%= @correct_answer.answer_c_correct %>
+</p>
+
+<p>
+  <strong>Answer d correct:</strong>
+  <%= @correct_answer.answer_d_correct %>
+</p>
+
+<p>
+  <strong>Answer e correct:</strong>
+  <%= @correct_answer.answer_e_correct %>
+</p>
+
+<p>
+  <strong>Answer f correct:</strong>
+  <%= @correct_answer.answer_f_correct %>
+</p>
+
+<p>
+  <strong>Quizquestion:</strong>
+  <%= @correct_answer.quizquestion_id %>
+</p>
+
+<%= link_to 'Edit', edit_correct_answer_path(@correct_answer) %> |
+<%= link_to 'Back', correct_answers_path %>

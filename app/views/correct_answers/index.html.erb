@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Correct Answers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Answer a correct</th>
+      <th>Answer b correct</th>
+      <th>Answer c correct</th>
+      <th>Answer d correct</th>
+      <th>Answer e correct</th>
+      <th>Answer f correct</th>
+      <th>Quizquestion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @correct_answers.each do |correct_answer| %>
+      <tr>
+        <td><%= correct_answer.answer_a_correct %></td>
+        <td><%= correct_answer.answer_b_correct %></td>
+        <td><%= correct_answer.answer_c_correct %></td>
+        <td><%= correct_answer.answer_d_correct %></td>
+        <td><%= correct_answer.answer_e_correct %></td>
+        <td><%= correct_answer.answer_f_correct %></td>
+        <td><%= correct_answer.quizquestion_id %></td>
+        <td><%= link_to 'Show', correct_answer %></td>
+        <td><%= link_to 'Edit', edit_correct_answer_path(correct_answer) %></td>
+        <td><%= link_to 'Destroy', correct_answer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Correct Answer', new_correct_answer_path %>

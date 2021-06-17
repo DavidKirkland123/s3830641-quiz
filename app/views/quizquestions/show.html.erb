@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quizquestion:</strong>
+  <%= @quizquestion.quizquestion_id %>
+</p>
+
+<p>
+  <strong>Question:</strong>
+  <%= @quizquestion.question %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @quizquestion.description %>
+</p>
+
+<p>
+  <strong>Multiple correct answers:</strong>
+  <%= @quizquestion.multiple_correct_answers %>
+</p>
+
+<p>
+  <strong>Correct answer:</strong>
+  <%= @quizquestion.correct_answer %>
+</p>
+
+<p>
+  <strong>Explanation:</strong>
+  <%= @quizquestion.explanation %>
+</p>
+
+<p>
+  <strong>Tip:</strong>
+  <%= @quizquestion.tip %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @quizquestion.category %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @quizquestion.difficulty %>
+</p>
+
+<%= link_to 'Edit', edit_quizquestion_path(@quizquestion) %> |
+<%= link_to 'Back', quizquestions_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Answer a:</strong>
+  <%= @answer.answer_a %>
+</p>
+
+<p>
+  <strong>Answer b:</strong>
+  <%= @answer.answer_b %>
+</p>
+
+<p>
+  <strong>Answer c:</strong>
+  <%= @answer.answer_c %>
+</p>
+
+<p>
+  <strong>Answer d:</strong>
+  <%= @answer.answer_d %>
+</p>
+
+<p>
+  <strong>Answer e:</strong>
+  <%= @answer.answer_e %>
+</p>
+
+<p>
+  <strong>Answer f:</strong>
+  <%= @answer.answer_f %>
+</p>
+
+<p>
+  <strong>Quizquestion:</strong>
+  <%= @answer.quizquestion_id %>
+</p>
+
+<%= link_to 'Edit', edit_answer_path(@answer) %> |
+<%= link_to 'Back', answers_path %>

@@ -1,0 +1,52 @@
+<%= form_with(model: correct_answer) do |form| %>
+  <% if correct_answer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(correct_answer.errors.count, "error") %> prohibited this correct_answer from being saved:</h2>
+
+      <ul>
+        <% correct_answer.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :answer_a_correct %>
+    <%= form.check_box :answer_a_correct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_b_correct %>
+    <%= form.check_box :answer_b_correct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_c_correct %>
+    <%= form.check_box :answer_c_correct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_d_correct %>
+    <%= form.check_box :answer_d_correct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_e_correct %>
+    <%= form.check_box :answer_e_correct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :answer_f_correct %>
+    <%= form.check_box :answer_f_correct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quizquestion_id %>
+    <%= form.number_field :quizquestion_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

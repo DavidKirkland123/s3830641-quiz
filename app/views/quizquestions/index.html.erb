@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Quizquestions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quizquestion</th>
+      <th>Question</th>
+      <th>Description</th>
+      <th>Multiple correct answers</th>
+      <th>Correct answer</th>
+      <th>Explanation</th>
+      <th>Tip</th>
+      <th>Category</th>
+      <th>Difficulty</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @quizquestions.each do |quizquestion| %>
+      <tr>
+        <td><%= quizquestion.quizquestion_id %></td>
+        <td><%= quizquestion.question %></td>
+        <td><%= quizquestion.description %></td>
+        <td><%= quizquestion.multiple_correct_answers %></td>
+        <td><%= quizquestion.correct_answer %></td>
+        <td><%= quizquestion.explanation %></td>
+        <td><%= quizquestion.tip %></td>
+        <td><%= quizquestion.category %></td>
+        <td><%= quizquestion.difficulty %></td>
+        <td><%= link_to 'Show', quizquestion %></td>
+        <td><%= link_to 'Edit', edit_quizquestion_path(quizquestion) %></td>
+        <td><%= link_to 'Destroy', quizquestion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Quizquestion', new_quizquestion_path %>
